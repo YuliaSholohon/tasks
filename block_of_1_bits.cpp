@@ -1,7 +1,7 @@
 #include<iostream>
 #include <bitset>
 using namespace std;
-//функція повертає блок одиниць довжиною n починаючи з позиції p
+//function returns the bloc of 1 wiht length n from position p
 unsigned long block_of_1(int n,int p);
 int main(){
 	int n,p;
@@ -21,10 +21,10 @@ unsigned long block_of_1(int n,int p)
 	unsigned long mask=0xffffffff;
 	unsigned  long  x;
 	int temp1,temp2;
-	temp1=32-n-p;оо
-	x=(mask>>temp1);//визначаємо межі блоку зліва
+	temp1=32-n-p;
+	x=(mask>>temp1);//define the limits of the block on the left
 	temp2=32-p;
-	temp2=mask>>temp2;//визначаємо межі блоку зправа
-	x=x^temp2;//накладання меж з правого боку на межі  лівого боку
+	temp2=mask>>temp2;//define the limits of the block on the right
+	x=x^temp2;//overlay limits
 return x;
 }
